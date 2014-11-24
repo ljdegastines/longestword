@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  root to: 'game#challenge'
+  get 'challenge', to: 'game#challenge'
+  get 'result', to: "game#result"
+  get 'grid', to: 'game#generate_grid'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

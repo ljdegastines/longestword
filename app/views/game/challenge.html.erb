@@ -1,0 +1,18 @@
+<h1>Let's play!</h1>
+<!-- Choose grid size -->
+<form action="/challenge" class="">
+  <label for="gridsize" class="">Choose the size of the grid</label>
+  <input type="text" id="gridsize" name="grid_size">
+  <input type="submit" value="Generate!">
+</form>
+<!-- Display grid -->
+<%= @grid.join(" ") %>
+<% @start_time %>
+<!-- Input word -->
+<form action="/result" class="">
+  <label for="gridsize" class="">What is your best shot?</label>
+  <input type="text" id="word" name="word">
+  <input type="hidden" value="<%= @start_time %>" name="start_time">
+  <input type="hidden" value="<%= @grid %>" name="grid">
+  <input type="submit" value="Go!">
+</form>
